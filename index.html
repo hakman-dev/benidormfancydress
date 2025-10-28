@@ -185,9 +185,10 @@
         }
 
         :root {
-            --primary-color: #FF6B35;
-            --secondary-color: #004E89;
-            --accent-color: #F77F00;
+            /* Updated color scheme - removed gradients, using solid party colors */
+            --primary-color: #E91E63;
+            --secondary-color: #6A1B9A;
+            --accent-color: #00BCD4;
             --dark-bg: #1A1A2E;
             --light-bg: #F8F9FA;
             --text-dark: #2C3E50;
@@ -242,7 +243,8 @@
 
         /* Header Styles */
         .header {
-            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--secondary-color) 100%);
+            /* Solid color instead of gradient */
+            background: var(--secondary-color);
             color: var(--white);
             padding: 1rem 0;
             position: sticky;
@@ -291,7 +293,8 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(0, 78, 137, 0.9) 100%),
+            /* Solid overlay instead of gradient */
+            background: linear-gradient(rgba(106, 27, 154, 0.9), rgba(26, 26, 46, 0.95)),
             url('/placeholder.svg?height=800&width=1600') center/cover;
             color: var(--white);
             padding: 6rem 0;
@@ -307,7 +310,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(255, 107, 53, 0.2) 0%, transparent 70%);
+            /* Subtle glow effect instead of gradient pulse */
+            background: radial-gradient(circle at 50% 50%, rgba(233, 30, 99, 0.2) 0%, transparent 70%);
             animation: pulse 4s ease-in-out infinite;
         }
 
@@ -351,14 +355,15 @@
 
         .date-badge {
             display: inline-block;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            /* Solid background instead of gradient */
+            background: var(--primary-color);
             color: var(--white);
             padding: 1rem 2rem;
             border-radius: 50px;
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 2rem;
-            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+            box-shadow: 0 8px 20px rgba(233, 30, 99, 0.4);
             animation: bounce 2s ease-in-out infinite;
         }
 
@@ -424,14 +429,16 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            /* Solid background instead of gradient */
+            background: var(--primary-color);
             color: var(--white);
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+            box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.6);
+            box-shadow: 0 10px 30px rgba(233, 30, 99, 0.6);
+            background: #C2185B;
         }
 
         .btn-secondary {
@@ -474,7 +481,8 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            /* Solid color instead of gradient */
+            background: var(--primary-color);
             border-radius: 2px;
         }
 
@@ -540,7 +548,8 @@
         }
 
         .venue-header {
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            /* Solid background instead of gradient */
+            background: var(--secondary-color);
             color: var(--white);
             padding: 1.5rem;
         }
@@ -578,7 +587,8 @@
         }
 
         .tag-highlight {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            /* Solid background instead of gradient */
+            background: var(--primary-color);
             color: var(--white);
         }
 
@@ -596,7 +606,8 @@
             transform: translateX(-50%);
             width: 4px;
             height: 100%;
-            background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+            /* Solid color instead of gradient */
+            background: var(--primary-color);
         }
 
         .timeline-item {
@@ -728,7 +739,8 @@
 
         /* Footer */
         .footer {
-            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--secondary-color) 100%);
+            /* Solid background instead of gradient */
+            background: var(--dark-bg);
             color: var(--white);
             padding: 3rem 0 1rem;
         }
@@ -777,7 +789,8 @@
             right: 2rem;
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            /* Solid background instead of gradient */
+            background: var(--primary-color);
             color: var(--white);
             border: none;
             border-radius: 50%;
@@ -786,7 +799,7 @@
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+            box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
             z-index: 999;
         }
 
@@ -797,7 +810,8 @@
 
         .back-to-top:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.6);
+            box-shadow: 0 10px 30px rgba(233, 30, 99, 0.6);
+            background: #C2185B;
         }
 
         /* Responsive Design */
@@ -871,7 +885,8 @@
                     <li><a href="#costumes">Costumes</a></li>
                     <li><a href="#guide">Travel Guide</a></li>
                     <li><a href="#faq">FAQ</a></li>
-                    <li><a href="https://the-flash.app" target="_blank" rel="noopener">Flash App 🔗</a></li>
+                    <!-- Updated link text from "Flash App" to "Flash" -->
+                    <li><a href="https://the-flash.app" target="_blank" rel="noopener">Flash 🔗</a></li>
                 </ul>
             </nav>
         </div>
@@ -913,7 +928,8 @@
 
             <div class="cta-buttons">
                 <a href="#event-details" class="btn btn-primary">View Full Guide</a>
-                <a href="https://the-flash.app" target="_blank" rel="noopener" class="btn btn-secondary">Explore Benidorm Nightlife</a>
+                <!-- Updated button text -->
+                <a href="https://the-flash.app" target="_blank" rel="noopener" class="btn btn-secondary">Explore Flash Benidorm Guide</a>
             </div>
         </div>
     </div>
@@ -990,7 +1006,8 @@
             <p>
                 Benidorm Fancy Dress happens annually on the Thursday following Benidorm's November Fiestas (celebrating the town's patron saints).
                 The timing coincides with British Miners' Holiday dates and the Benidorm Half Marathon, creating the perfect storm for this massive celebration.
-                Learn more about <a href="https://the-flash.app" target="_blank" rel="noopener" style="color: #0D47A1; font-weight: 600;">Benidorm's year-round events on The Flash App</a>.
+                <!-- Updated link text -->
+                Learn more about <a href="https://the-flash.app" target="_blank" rel="noopener" style="color: #0D47A1; font-weight: 600;">Benidorm's year-round events on Flash</a>.
             </p>
         </div>
     </div>
@@ -1110,8 +1127,9 @@
                         <span class="tag">📺 TV Famous</span>
                     </div>
                     <p style="margin-top: 1rem;">
+                        <!-- Updated link text -->
                         <a href="https://the-flash.app/venues/morgan-tavern" target="_blank" rel="noopener" style="color: var(--primary-color); font-weight: 600;">
-                            View Morgan's Tavern on The Flash App →
+                            View Morgan's Tavern on Flash →
                         </a>
                     </p>
                 </div>
@@ -1155,8 +1173,9 @@
                         <span class="tag">🎪 Cabaret Shows</span>
                     </div>
                     <p style="margin-top: 1rem;">
+                        <!-- Updated link text -->
                         <a href="https://the-flash.app/venues/sinatras-disco-pub" target="_blank" rel="noopener" style="color: var(--primary-color); font-weight: 600;">
-                            View Sinatras on The Flash App →
+                            View Sinatras on Flash →
                         </a>
                     </p>
                 </div>
@@ -1200,8 +1219,9 @@
                         <span class="tag">👥 All Ages</span>
                     </div>
                     <p style="margin-top: 1rem;">
+                        <!-- Updated link text -->
                         <a href="https://the-flash.app/venues/hotel-california-beach-club" target="_blank" rel="noopener" style="color: var(--primary-color); font-weight: 600;">
-                            View Hotel California on The Flash App →
+                            View Hotel California on Flash →
                         </a>
                     </p>
                 </div>
@@ -1224,8 +1244,9 @@
                         <span class="tag">🌙 Late Night</span>
                     </div>
                     <p style="margin-top: 1rem;">
+                        <!-- Updated link text -->
                         <a href="https://the-flash.app/venues/jokers" target="_blank" rel="noopener" style="color: var(--primary-color); font-weight: 600;">
-                            View Jokers on The Flash App →
+                            View Jokers on Flash →
                         </a>
                     </p>
                 </div>
@@ -1256,15 +1277,16 @@
         <div class="alert alert-info" style="margin-top: 3rem;">
             <div class="alert-title">🗺️ Explore All Benidorm Venues</div>
             <p>
+                <!-- Updated all references to Flash -->
                 Want to discover more bars, clubs, and entertainment venues in Benidorm?
                 <a href="https://the-flash.app" target="_blank" rel="noopener" style="color: #0D47A1; font-weight: 600;">
-                    The Flash App
+                    Flash
                 </a> features comprehensive listings of 100+ venues with live event schedules, opening hours, music genres, and real-time updates.
                 Plan your entire Benidorm nightlife experience including sports bars, cocktail lounges, LGBTQ+ venues, and live music spots.
             </p>
         </div>
 
-        <div style="margin-top: 2rem; padding: 2rem; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 15px; color: white; text-align: center;">
+        <div style="margin-top: 2rem; padding: 2rem; background: var(--primary-color); border-radius: 15px; color: white; text-align: center;">
             <h3 style="color: white; margin-bottom: 1rem; font-size: 1.5rem;">💰 Typical Venue Costs</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
                 <div>
@@ -1392,44 +1414,45 @@
             <h3 style="font-size: 2rem; text-align: center; margin-bottom: 2rem;">🎨 Popular Costume Themes</h3>
 
             <div class="card-grid">
-                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 15px; color: white;">
+                <!-- Updated card backgrounds to solid colors -->
+                <div style="background: var(--secondary-color); padding: 2rem; border-radius: 15px; color: white;">
                     <h4 style="color: white; font-size: 1.3rem; margin-bottom: 1rem;">🦸 Superheroes & Comics</h4>
                     <p style="opacity: 0.95;">
                         Batman, Superman, Wonder Woman, Spiderman, Avengers. Always popular and widely recognized. Easy to accessorize and find in shops.
                     </p>
                 </div>
 
-                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 2rem; border-radius: 15px; color: white;">
+                <div style="background: var(--primary-color); padding: 2rem; border-radius: 15px; color: white;">
                     <h4 style="color: white; font-size: 1.3rem; margin-bottom: 1rem;">📺 TV & Movie Characters</h4>
                     <p style="opacity: 0.95;">
                         Game of Thrones, Star Wars, Harry Potter, Disney characters. Current popular shows always well-represented at the event.
                     </p>
                 </div>
 
-                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 2rem; border-radius: 15px; color: white;">
+                <div style="background: var(--accent-color); padding: 2rem; border-radius: 15px; color: white;">
                     <h4 style="color: white; font-size: 1.3rem; margin-bottom: 1rem;">👥 Group Themed Outfits</h4>
                     <p style="opacity: 0.95;">
                         Perfect for stag/hen parties. Pink Ladies, Village People, supervillains, sports teams. Coordinate with your group before arrival!
                     </p>
                 </div>
 
-                <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 2rem; border-radius: 15px; color: white;">
+                <div style="background: #9C27B0; padding: 2rem; border-radius: 15px; color: white;">
                     <h4 style="color: white; font-size: 1.3rem; margin-bottom: 1rem;">🎸 80s & Retro</h4>
                     <p style="opacity: 0.95;">
                         Madonna, rock bands, Grease characters, disco themes. Easy to source accessories and instantly recognizable.
                     </p>
                 </div>
 
-                <div style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); padding: 2rem; border-radius: 15px; color: white;">
+                <div style="background: #00838F; padding: 2rem; border-radius: 15px; color: white;">
                     <h4 style="color: white; font-size: 1.3rem; margin-bottom: 1rem;">👑 Historical Figures</h4>
                     <p style="opacity: 0.95;">
                         Romans, Egyptians, Vikings, royalty. Always impressive and allows for elaborate costume details.
                     </p>
                 </div>
 
-                <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 2rem; border-radius: 15px; color: #333;">
-                    <h4 style="color: #333; font-size: 1.3rem; margin-bottom: 1rem;">😂 Humorous Parodies</h4>
-                    <p>
+                <div style="background: #D81B60; padding: 2rem; border-radius: 15px; color: white;">
+                    <h4 style="color: white; font-size: 1.3rem; margin-bottom: 1rem;">😂 Humorous Parodies</h4>
+                    <p style="opacity: 0.95;">
                         Inflatable costumes, punny outfits, satirical characters. Some described as "near the knuckle" but all in good fun!
                     </p>
                 </div>
@@ -1580,8 +1603,9 @@
             <p>
                 Aromas British Café and The Brunch Box specialize in hangover breakfasts. Full English available from €3 at numerous bars opening 10-11am.
                 Most venues along The Strip serve breakfast until 3pm, perfect for late risers after all-night celebrations.
+                <!-- Updated link text -->
                 <a href="https://the-flash.app" target="_blank" rel="noopener" style="color: #1B5E20; font-weight: 600;">
-                    Find breakfast spots on The Flash App
+                    Find breakfast spots on Flash
                 </a>.
             </p>
         </div>
@@ -1697,7 +1721,7 @@
                         Yes, the event is generally safe with heavy National Police (Policía Nacional) presence throughout British Square. Given the 40,000
                         crowd size, there's minimal serious trouble beyond typical drink-induced incidents. However, watch for pickpockets who target
                         intoxicated tourists, stay with your group, don't carry unnecessary valuables, and keep phone/wallet in front pockets.
-                        Know emergency contacts: General Emergency 112, Local Police 092, Tourist Assistance 965 85 13 11.
+                        Know emergency contacts: General Emergency 112, Local Police 092, Tourist Assistance 965 85 13 11, British Consul 965 216 022.
                     </p>
                 </div>
             </div>
@@ -1804,7 +1828,7 @@
 </section>
 
 <!-- CTA Section -->
-<section class="section section-alt" style="background: linear-gradient(135deg, var(--dark-bg) 0%, var(--secondary-color) 100%); color: white;">
+<section class="section section-alt" style="background: var(--secondary-color); color: white;">
     <div class="container">
         <div style="text-align: center; max-width: 800px; margin: 0 auto;">
             <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; color: white;">
@@ -1816,17 +1840,19 @@
 
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
                 <a href="#event-details" class="btn btn-primary">View Complete Guide</a>
-                <a href="https://the-flash.app" target="_blank" rel="noopener" class="btn btn-secondary">Explore Benidorm on Flash App</a>
+                <!-- Updated button text -->
+                <a href="https://the-flash.app" target="_blank" rel="noopener" class="btn btn-secondary">Explore Flash Benidorm Guide</a>
             </div>
 
             <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
-                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.5rem;">📱 Download The Flash App</h3>
+                <!-- Updated all references to Flash -->
+                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.5rem;">📱 Discover Flash</h3>
                 <p style="opacity: 0.95; margin-bottom: 1rem;">
                     Your ultimate companion for Benidorm nightlife! Discover 100+ venues, live event schedules, opening hours,
                     and real-time updates for bars, clubs, restaurants, and entertainment across Benidorm.
                 </p>
                 <a href="https://the-flash.app" target="_blank" rel="noopener" style="color: var(--primary-color); font-weight: 700; font-size: 1.1rem;">
-                    Visit The Flash App →
+                    Visit Flash →
                 </a>
             </div>
         </div>
@@ -1857,9 +1883,10 @@
             </div>
 
             <div class="footer-section">
+                <!-- Updated all references to Flash -->
                 <h3>Benidorm Resources</h3>
                 <ul class="footer-links">
-                    <li><a href="https://the-flash.app" target="_blank" rel="noopener">The Flash App - Nightlife Guide</a></li>
+                    <li><a href="https://the-flash.app" target="_blank" rel="noopener">Flash - Nightlife Guide</a></li>
                     <li><a href="https://the-flash.app/venues/morgan-tavern" target="_blank" rel="noopener">Morgan's Tavern</a></li>
                     <li><a href="https://the-flash.app/venues/sinatras-disco-pub" target="_blank" rel="noopener">Sinatras Disco Pub</a></li>
                     <li><a href="https://the-flash.app/venues/jokers" target="_blank" rel="noopener">Jokers</a></li>
@@ -1886,8 +1913,9 @@
             <p style="margin-top: 0.5rem; font-size: 0.9rem;">
                 Last updated: January 2025 | Event information subject to change | Always verify details closer to event date
             </p>
+            <!-- Updated footer attribution -->
             <p style="margin-top: 1rem; font-size: 0.9rem;">
-                Powered by <a href="https://the-flash.app" target="_blank" rel="noopener" style="color: var(--primary-color); font-weight: 600;">The Flash App</a> -
+                Powered by <a href="https://the-flash.app" target="_blank" rel="noopener" style="color: var(--primary-color); font-weight: 600;">Flash</a> -
                 Benidorm's Premier Nightlife & Events Platform
             </p>
         </div>
